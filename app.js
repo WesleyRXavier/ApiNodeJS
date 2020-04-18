@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 
 const rotaUsuario = require("./routes/usuario");
-
+app.use('/uploads', express.static('uploads'));//coloca a pasta uploads publica,
 app.use(bodyParser.urlencoded({ extended: false })); //apenas dados simples
 app.use(bodyParser.json()); //so aceita json na entrada no body
 
